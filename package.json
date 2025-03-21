@@ -4,7 +4,8 @@
   "description": "webNode",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nguyenngoctu9801/webnode/issues"
   },
-  "homepage": "https://github.com/nguyenngoctu9801/webnode#readme"
+  "homepage": "https://github.com/nguyenngoctu9801/webnode#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
