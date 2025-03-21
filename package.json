@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "webNode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenngoctu9801/webnode.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "tu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenngoctu9801/webnode/issues"
+  },
+  "homepage": "https://github.com/nguyenngoctu9801/webnode#readme"
+}
