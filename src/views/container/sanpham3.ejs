@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <%- include('../nav.ejs') %>
+
+    <div class="container-sp mt-5">
+        <div class="breadcrumb-custom">
+            <div class="breadcrumb-content">
+                <div>
+                    <a href="/" class="breadcrumb-link">Trang chủ</a> / <span>Nút bấm khẩn cấp SOS V1</span>
+                </div>
+                <div>
+                    <button class="btn btn-light" onclick="window.location.href='/sanpham2'">&lt; Trước</button>
+                    <button class="btn btn-light" onclick="window.location.href='/sanpham4'">Tiếp &gt;</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-gt">
+            <div class="product-left">
+                <div class="product-image-sp">
+                    <img src="/image/sp3.jpg" alt="Sản phẩm" class="img-fluid">
+                </div>
+                <div class="product-info mt-5">
+                    <ul>
+                        <li>-   Nút nhấn khẩn cấp không dây SOS được sử dụng trong các tình huống khẩn cấp, nguy hiểm khi phát hiện đám cháy giúp thông báo tới mọi người và cơ quan chức năng nhanh và chính xác nhất.</li>
+                        <li>-   Sản phẩm kết nối với bộ điều khiển trung tâm qua tần số 2.4Ghz với công nghệ BLE Mesh tiên tiến đáp ứng nhanh và khoảng cách trên 150 mét, khả năng xuyên tường dầy tới 60cm.</li>
+                        <li>-   Thiết bị nhỏ gọn dễ lắp đặt hoặc mang trong người mà không gây bất tiện hay khó khăn cho người sử dụng. Có thể lắp đặt ở mọi vị trí kể cả nơi có không gian hẹp</li>
+                        <li>-   Sản phẩm sử dụng pin CR2032 nhỏ gọn, dễ dàng mua và thay thế nhưng lại có thể cung cấp thời gian sử dụng lên tới 2-3 năm.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-right">
+                <h1 class="product-title">Nút bấm khẩn cấp SOS V1</h1>
+                <p class="product-price-sp">0<span class="currency" style="text-decoration: underline;">đ</span></p>
+                <button class="btn  contact-btn">Liên hệ</button>
+
+                 <!-- Thông tin chi tiết -->
+                <div class="details-container">
+                    <div class="details-header" onclick="toggleDetails()">
+                        <h2>Thông tin chi tiết</h2>
+                        <span id="toggle-icon">-</span>
+                    </div>
+                    <div id="details-content">
+                        <table class="details-table">
+                            <tr><td>Sản phẩm/ Model</td><td>SOS BLE</td></tr>
+                            <tr><td>Hãng sản xuất</td><td>Vntech24h.,Jsc</td></tr>
+                            <tr><td>Công nghệ kết nối</td><td>BLE 5.4 2.4Ghz</td></tr>
+                            <tr><td>Bộ vi xử lí</td><td>64 Mhz Cortex-M4</td></tr>
+                            <tr><td>Bộ nhớ</td><td>92 KB Flash  24 KB RAM</td></tr>
+                            <tr><td>Nguồn cung cấp</td><td>Pin CR2032 3V ( 2-3 năm sử dụng)</td></tr>
+                            <tr><td>Nhiệt độ, độ ẩm hoạt động</td><td>-10℃ ~ 60℃, 0~95% không ngưng tụ</td></tr>
+                            <tr><td>Kích thước</td><td>50x50x16mm</td></tr>
+                            <tr><td>Trọng lượng</td><td>10gram</td></tr>
+                            <tr><td>Bảo hành</td><td>12 tháng</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer.ejs') %> 
+    </div>
+    
+
+
+  
+</body>
+</html>
+<script>
+    function toggleDetails() {
+    const details = document.getElementById("details-content");
+    const icon = document.getElementById("toggle-icon");
+
+    if (details.style.display === "none") {
+        details.style.display = "block";
+        icon.textContent = "-";
+    } else {
+        details.style.display = "none";
+        icon.textContent = "+";
+    }
+}
+
+</script>
+

@@ -1,0 +1,154 @@
+.container-overview {
+    background: linear-gradient(to right, #3c3636, #f6c3b2);
+
+    padding: 50px 10px;
+}
+
+.title-overview {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.comparison-box {
+    background: #d0b392;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Khoảng cách khi xuống dòng trên mobile */
+}
+.comparison-box h2 {
+    font-size: 20px;
+}
+
+.traditional-system {
+    border-left: 5px solid red;
+}
+
+.vsafe-system {
+    border-left: 5px solid green;
+}
+
+
+.advantages-box {
+    padding: 40px; 
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.advantages-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.advantages-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.advantages-box ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px;
+}
+
+.VSAFE{
+    color: #8b0000;
+}
+
+.advantages-box ul li::before {
+    content: "✔";
+    color: green;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.image-container-overview {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container-overview img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .row.align-items-center {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .advantages-box, .image-container-overview {
+        height: 100%;
+    }
+}
+
+.info-box {
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.info-box h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-box ul li {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.image-container-overview1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.image-container-overview1 img {
+    width: 60%;
+    height: auto;
+    max-height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .row.align-items-center {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

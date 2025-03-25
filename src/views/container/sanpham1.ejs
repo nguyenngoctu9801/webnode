@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <%- include('../nav.ejs') %>
+
+    <div class="container-sp mt-5">
+        <div class="breadcrumb-custom">
+            <div class="breadcrumb-content">
+                <div>
+                    <a href="/" class="breadcrumb-link">Trang chủ</a> / <span>Thiết bị trung tâm an ninh OFFICE 4G</span>
+                </div>
+                <div>
+                    <button class="btn btn-light-sp1">&lt; Trước</button>
+                    <button class="btn btn-light" onclick="window.location.href='/sanpham2'">Tiếp &gt;</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="product-container-gt">
+            <div class="product-left">
+                <div class="product-image-sp">
+                    <img src="/image/sp1.jpg" alt="Sản phẩm" class="img-fluid">
+                </div>
+                <div class="product-info mt-5">
+                    <ul>
+                        <li>-   Sản phẩm được thiết kế nhỏ gọn, tinh tế, sử dụng vỏ nhôm chống nhiễu từ trường chất lượng cao.</li>
+                        <li>-   Thiết bị sử dụng nguồn có sẵn trong tủ báo cháy (hoặc sử dụng nguồn ngoài và có thêm pin dự phòng riêng lithium 3.7V 2000mAh), dải điện áp hoạt động đáp ứng mọi loại tủ có sẵn trên thị trường.</li>
+                        <li>-   Thiết bị có khả năng nhận tín hiệu cảnh báo từ nhiều tủ đồng thời, ngoài ra có khả năng kết nối với mọi loại tủ trên thị trường, có khả năng điều khiển các thiết bị liên động như Loa Đèn cảnh báo, tủ điện, thang máy…</li>
+                        <li>-   Sử dụng băng tần viễn thông 2G/4G kết nối server nên khả năng lắp đặt tương thích mọi địa điểm, công trình, không lo ngại bị cắt dây mạng hay đường truyền bị gián đoạn do tác động bên ngoài.</li>
+                        <li>-   Server hỗ trợ gọi điện và nhắn tin cùng lúc tới 5-10 (có thể mở rộng hơn) số điện thoại được lưu trên hệ thống, giúp đảm bảo chắc chắn thông báo sự cố tới những đơn vị quản lí và có trách nhiệm.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-right">
+                <h1 class="product-title">Thiết bị trung tâm an ninh OFFICE 4G</h1>
+                <p class="product-price-sp">Giá: 3.600.000<span class="currency" style="text-decoration: underline;">đ</span></p>
+                <button class="btn  contact-btn">Liên hệ</button>
+
+                 <!-- Thông tin chi tiết -->
+                <div class="details-container">
+                    <div class="details-header" onclick="toggleDetails()">
+                        <h2>Thông tin chi tiết</h2>
+                        <span id="toggle-icon">-</span>
+                    </div>
+                    <div id="details-content">
+                        <table class="details-table">
+                            <tr><td>Sản phẩm/ Model</td><td>OFFICE 4G</td></tr>
+                            <tr><td>Hãng sản xuất</td><td>Vntech24h.,Jsc</td></tr>
+                            <tr><td>Kết nối mạng</td><td>2G/4G (thiết bị chạy được cả 2 băng tần)</td></tr>
+                            <tr><td>Bộ vi xử lí</td><td>72 Mhz Cortex-M3</td></tr>
+                            <tr><td>Bộ nhớ</td><td>64Mb Flash/128Mb Ram</td></tr>
+                            <tr><td>Nguồn cung cấp</td><td>9V ~ 100V có bảo vệ quá dòng quá áp, quá tải..</td></tr>
+                            <tr><td>Pin dự phòng</td><td>Sử dụng nguồn của tủ hoặc nguồn riêng (option)</td></tr>
+                            <tr><td>Nhiệt độ, độ ẩm hoạt động</td><td>-10℃ ~ 60℃, 0~95% không ngưng tụ</td></tr>
+                            <tr><td>Kích thước</td><td>90x57x23mm</td></tr>
+                            <tr><td>Trọng lượng</td><td>300gram</td></tr>
+                            <tr><td>Bảo hành</td><td>12 tháng</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer.ejs') %> 
+    </div>
+    
+
+
+  
+</body>
+</html>
+<script>
+    function toggleDetails() {
+    const details = document.getElementById("details-content");
+    const icon = document.getElementById("toggle-icon");
+
+    if (details.style.display === "none") {
+        details.style.display = "block";
+        icon.textContent = "-";
+    } else {
+        details.style.display = "none";
+        icon.textContent = "+";
+    }
+}
+
+</script>
+
